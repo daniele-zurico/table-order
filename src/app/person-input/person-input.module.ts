@@ -1,12 +1,13 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {PersonInputComponent} from './person-input.component';
-import {MdInputModule} from '@angular/material';
+import {MdInputModule, MdButtonModule} from '@angular/material';
 
 @NgModule({
     imports: [
         CommonModule,
-        MdInputModule
+        MdInputModule,
+        MdButtonModule
     ],
     declarations: [PersonInputComponent],
     exports: [PersonInputComponent]

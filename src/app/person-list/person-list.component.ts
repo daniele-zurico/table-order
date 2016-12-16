@@ -30,4 +30,15 @@ export class PersonListComponent implements OnInit {
   ngOnInit() {
   }
 
+  public peopleList(person): void {
+    switch(this.filter){
+      case 'ATTENDING':
+        return person.filter(person => person.attending);
+      case 'GUESTS':
+        return person.filter(person => person.guests > 0);
+      default:
+        return person;
+    }
+  }
+
 }

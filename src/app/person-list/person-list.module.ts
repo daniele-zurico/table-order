@@ -1,12 +1,15 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {PersonListComponent} from './person-list.component';
-import {MdCheckboxModule} from '@angular/material';
+import {MdCheckboxModule, MdCardModule, MdGridListModule, MdButtonModule} from '@angular/material';
 
 @NgModule({
     imports: [
         CommonModule,
-        MdCheckboxModule
+        MdCheckboxModule,
+        MdButtonModule,
+        MdCardModule,
+        MdGridListModule
     ],
     declarations: [PersonListComponent],
     exports: [PersonListComponent]
