@@ -1,3 +1,34 @@
-<h1>
-  {{title}}
-</h1>
+<div fx-layout="row" fx-layout-align="space-around center" >
+  <div class="flex-item">
+    <h1>{{title}}</h1>
+  </div>
+</div>
+
+<div fx-layout="row" fx-layout-align="space-around center" >
+  <div class="flex-item">
+    <app-filter-select
+            (updateFilter)="updateFilter($event)">
+    </app-filter-select>
+  </div>
+</div>
+
+<div fx-layout="row" fx-layout-align="space-around center" >
+  <div class="flex-item">
+    <app-person-input
+            (addPerson)="addPerson($event)">
+    </app-person-input>
+  </div>
+</div>
+
+<div fx-layout="row" fx-layout-align="space-around center" >
+  <div class="flex-item">
+    <app-person-list
+            [people]="people"
+            [filter]="filter"
+            (addGuest)="addGuest($event)"
+            (removeGuest)="removeGuest($event)"
+            (removePerson)="removePerson($event)"
+            (toggleAttending)="toggleAttending($event)">
+    </app-person-list>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<table width="100%" border="0" cellpadding="5" cellspacing="0" *ngIf="people.length > 0">
+	<th>Name</th>
+	<th>Guest</th>
+	<th>Add</th>
+	<th>Attending</th>
+	<th>Delete</th>
+	<tr *ngFor="let p of people">
+		<td>{{p.name}}</td>
+		<td>{{p.guests}}</td>
+		<td>
+			<button
+					md-raised-button
+					color="accent"
+					(click)="addGuest.emit(p)"
+			>+
+			</button>
+			<button
+					*ngIf="p.guests > 0"
+					md-raised-button
+					color="warn"
+					(click)="removeGuest.emit(p)"
+			>-
+			</button>
+		</td>
+		<td>
+			<md-checkbox
+					[checked]="p.attending"
+					(change)="toggleAttending.emit(p)"
+			>
+			</md-checkbox>
+		</td>
+		<td>
+			<button
+					md-raised-button
+					color="warn"
+					(click)="removePerson.emit(p)"
+			>X
+			</button>
+		</td>
+	</tr>
+</table>
