@@ -6,8 +6,6 @@ import {HttpModule} from '@angular/http';
 import {AppComponent} from './app.component';
 import {MaterialModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {FilterSelectModule} from './filter-select/filter-select.module';
-import {PersonInputModule} from './person-input/person-input.module';
 import {PersonListModule} from './person-list/person-list.module';
 
 @NgModule({
@@ -20,8 +18,6 @@ import {PersonListModule} from './person-list/person-list.module';
         HttpModule,
         MaterialModule.forRoot(),
         FlexLayoutModule.forRoot(),
-        FilterSelectModule,
-        PersonInputModule,
         PersonListModule
     ],
     providers: [],

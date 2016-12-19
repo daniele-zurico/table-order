@@ -1,7 +1,11 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {PersonListComponent} from './person-list.component';
-import {MdCheckboxModule, MdCardModule, MdGridListModule, MdButtonModule} from '@angular/material';
+import {
+    MdCheckboxModule, MdCardModule, MdGridListModule, MdButtonModule,
+    MdDialogModule
+} from '@angular/material';
+import {BookDialogModule} from '../book-dialog/book-dialog.module';
 
 @NgModule({
     imports: [
@@ -9,10 +13,13 @@ import {MdCheckboxModule, MdCardModule, MdGridListModule, MdButtonModule} from '
         MdCheckboxModule,
         MdButtonModule,
         MdCardModule,
+        MdDialogModule,
+        BookDialogModule,
         MdGridListModule
     ],
     declarations: [PersonListComponent],
     exports: [PersonListComponent]
 })
 export class PersonListModule {
+
 }

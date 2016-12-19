@@ -1,0 +1,134 @@
+.tables {
+  position: absolute;
+  top: 111px;
+  left: 123px;
+}
+
+.t1-p1-add {
+  position: absolute;
+  top: 176px;
+  left: 220px;
+}
+
+.t1-p2-add {
+  position: absolute;
+  top: 176px;
+  left: 336px;
+}
+
+.t1-p3-add {
+  position: absolute;
+  top: 294px;
+  left: 336px;
+}
+
+.t1-p4-add {
+  position: absolute;
+  top: 294px;
+  left: 218px;
+}
+
+.t2-p1-add {
+  position: absolute;
+  top: 134px;
+  left: 533px;
+}
+
+.t2-p2-add {
+  position: absolute;
+  top: 134px;
+  left: 640px;
+}
+
+.t2-p3-add {
+  position: absolute;
+  top: 223px;
+  left: 692px;
+}
+
+.t2-p4-add {
+  position: absolute;
+  top: 313px;
+  left: 640px;
+}
+
+.t2-p5-add {
+  position: absolute;
+  top: 312px;
+  left: 532px;
+}
+
+.t2-p6-add {
+  position: absolute;
+  top: 222px;
+  left: 483px;
+}
+
+.t3-p1-add {
+  position: absolute;
+  top: 135px;
+  left: 869px;
+}
+
+.t3-p2-add {
+  position: absolute;
+  top: 135px;
+  left: 963px;
+}
+
+.t3-p3-add {
+  position: absolute;
+  top: 203px;
+  left: 802px;
+}
+
+.t3-p4-add {
+  position: absolute;
+  top: 295px;
+  left: 802px;
+}
+
+.t3-p5-add {
+  position: absolute;
+  top: 362px;
+  left: 868px;
+}
+
+.t3-p6-add {
+  position: absolute;
+  top: 363px;
+  left: 962px;
+}
+
+.t3-p7-add {
+  position: absolute;
+  top: 296px;
+  left: 1029px;
+}
+
+.t3-p8-add {
+  position: absolute;
+  top: 202px;
+  left: 1029px;
+}
+
+.t1-p1-add.guest_name, .t1-p2-add.guest_name, .t1-p3-add.guest_name, .t1-p4-add.guest_name,
+.t2-p1-add.guest_name, .t2-p2-add.guest_name, .t2-p3-add.guest_name, .t2-p4-add.guest_name, .t2-p5-add.guest_name, .t2-p6-add.guest_name,
+.t3-p1-add.guest_name, .t3-p2-add.guest_name, .t3-p3-add.guest_name, .t3-p4-add.guest_name, .t3-p5-add.guest_name, .t3-p6-add.guest_name, .t3-p7-add.guest_name, .t3-p8-add.guest_name {
+  color: #1ecae9 !important;
+  -webkit-transform: rotate(-45deg);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.t1-p1-add.seated, .t1-p2-add.seated, .t1-p3-add.seated, .t1-p4-add.seated,
+.t2-p1-add.seated, .t2-p2-add.seated, .t2-p3-add.seated, .t2-p4-add.seated, .t2-p5-add.seated, .t2-p6-add.seated
+.t3-p1-add.seated, .t3-p2-add.seated, .t3-p3-add.seated, .t3-p4-add.seated, .t3-p5-add.seated, .t3-p6-add.seated, .t3-p7-add.seated, .t3-p8-add.seated {
+
+  color: #e9c912 !important;
+  -webkit-transform: rotate(-45deg);
+  font-weight: bold;
+  cursor: not-allowed;
+}
+
+

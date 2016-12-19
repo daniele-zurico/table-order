@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { PersonInputComponent } from './person-input.component';
+import { BookDialogComponent } from './book-dialog.component';
 
-describe('PersonInputComponent', () => {
-  let component: PersonInputComponent;
-  let fixture: ComponentFixture<PersonInputComponent>;
+describe('BookDialogComponent', () => {
+  let component: BookDialogComponent;
+  let fixture: ComponentFixture<BookDialogComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PersonInputComponent ]
+      declarations: [ BookDialogComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PersonInputComponent);
+    fixture = TestBed.createComponent(BookDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
