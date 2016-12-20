@@ -5,7 +5,7 @@
 				<button
 						md-mini-fab
 						color="warn"
-						(click)="dialogRef.close({action: 'close'})"
+						(click)="dialogRef.close()"
 				>X
 				</button>
 			</div>
@@ -16,7 +16,7 @@
 						placeholder="Booking Name"
 						#name
 						style="width: 200px"
-						[disabled]="action === 'seat'"
+						[disabled]="action === 'SEAT'"
 						[value]="guestName.name"
 				></md-input>
 			</div>
@@ -31,8 +31,8 @@
 						type="number"
 						min="1"
 						max="8"
-						[value]="action === 'seat' ? 1 : ''"
-						[disabled]="action === 'seat'"
+						[value]="action === 'SEAT' ? 1 : ''"
+						[disabled]="action === 'SEAT'"
 						style="width: 200px"
 				></md-input>
 			</div>
@@ -41,32 +41,32 @@
 	
 	<md-card-actions style="text-align: center">
 		<button
-				*ngIf="action == 'book'"
+				*ngIf="action == 'BOOK'"
 				md-raised-button
 				color="primary"
 				(click)="dialogRef.close({
-					action: 'book',
+					action: 'BOOK',
 					guest_name: name._value,
 					guest_number: guests_number._value
 				})"
 		>Book
 		</button>
 		<button
-				*ngIf="action == 'seat'"
+				*ngIf="action == 'SEAT'"
 				md-raised-button
 				color="accent"
 				(click)="dialogRef.close({
-					action: 'seat',
+					action: 'SEAT',
 					guest_name: name._value,
 					guest_number: 1
 				})"
 		>Seat
 		</button>
 		<button
-				*ngIf="action == 'seat'"
+				*ngIf="action == 'SEAT'"
 				md-raised-button
 				color="warn"
-				(click)="dialogRef.close({action: 'cancel'})"
+				(click)="dialogRef.close({action: 'CANCEL'})"
 		>Cancel
 		</button>
 	</md-card-actions>
