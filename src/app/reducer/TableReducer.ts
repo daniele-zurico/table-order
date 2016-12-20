@@ -4,7 +4,39 @@ export const BOOK = 'BOOK';
 export const SEAT = 'SEAT';
 export const CANCEL = 'CANCEL';
 
-export const table = (state, action: Action) => {
+export function initialiseTables() {
+    let people = [];
+    for (let i = 0; i < 3; i++) {
+        let guest = {
+            name: '',
+            status: ''
+        };
+        if (i == 0) {
+            let first_t = [];
+            for (let t1 = 0; t1 < 4; t1++) {
+                first_t.push(guest);
+            }
+            people.push(first_t);
+        }
+        if (i == 1) {
+            let second_t = [];
+            for (let t1 = 0; t1 < 6; t1++) {
+                second_t.push(guest);
+            }
+            people.push(second_t);
+        }
+        if (i == 2) {
+            let third_t = [];
+            for (let t1 = 0; t1 < 8; t1++) {
+                third_t.push(guest);
+            }
+            people.push(third_t);
+        }
+    }
+    return people;
+}
+
+export function table(state: any = initialiseTables(), action: Action) {
     switch (action.type) {
         case BOOK:
             if (action.payload.book.guest_number > state[action.payload.tableId].length) {

@@ -10,13 +10,16 @@ import {Store} from '@ngrx/store';
 })
 export class PersonListComponent {
 
-
-    private people: Array<any>;
+    /**
+     * this variable is public because used in the view
+     */
+    public people: Array<any>;
 
     private _dialogRef: MdDialogRef<BookDialogComponent>;
 
     constructor(public dialog: MdDialog,
                 private _store: Store<any>) {
+        // I subscribe to the store changes
         _store.select('table')
             .subscribe((table: Array<any>) => {
                 this.people = table;
@@ -29,8 +32,6 @@ export class PersonListComponent {
             width: '282px'
         });
 
-        this._dialogRef.componentInstance.tableId = tableId;
-        this._dialogRef.componentInstance.seatId = seatId;
         this._dialogRef.componentInstance.action = action;
         this._dialogRef.componentInstance.guestName = guestName;
 

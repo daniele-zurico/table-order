@@ -8,8 +8,6 @@ import {MdDialogRef} from '@angular/material';
 })
 export class BookDialogComponent implements OnInit {
 
-    public tableId: number;
-    public seatId: number;
     public action: string;
     public guestName: string;
 
