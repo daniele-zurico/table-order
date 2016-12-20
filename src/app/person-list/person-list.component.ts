@@ -12,13 +12,6 @@ export class PersonListComponent {
     @Input()
     public people: any;
 
-    @Output()
-    public book: EventEmitter<any> = new EventEmitter<any>();
-    @Output()
-    public seat: EventEmitter<any> = new EventEmitter<any>();
-    @Output()
-    public cancel: EventEmitter<any> = new EventEmitter<any>();
-
     private _dialogRef: MdDialogRef<BookDialogComponent>;
 
     constructor(public dialog: MdDialog) {
@@ -52,7 +45,13 @@ export class PersonListComponent {
         });
     }
 
-
+    /**
+     * Book a table with multiple guests
+     *
+     * @param book
+     * @param seatId
+     * @param tableId
+     */
     private bookTable(book:any, seatId: number, tableId: number): void {
         if (book.guest_number > this.people[tableId].length) {
             alert(book.guest_number + ' guest is too much for this table! Please choose one bigger');
@@ -88,14 +87,26 @@ export class PersonListComponent {
         }
     }
 
+    /**
+     * Cancel a reservation
+     *
+     * @param tableId
+     * @param seatId
+     * @returns {any}
+     */
     private cancelBook(tableId: number, seatId: number): void {
         this.people[tableId][seatId] = {
             name: '',
             status: ''
         };
-        return this.people;
     }
 
+    /**
+     * After booking you can seat guests
+     *
+     * @param tableId
+     * @param seatId
+     */
     private seatGuests(tableId: number, seatId: number): void {
         this.people[tableId][seatId].status = 'seated';
     }

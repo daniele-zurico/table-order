@@ -16,6 +16,9 @@ export class AppComponent implements OnInit {
         this.initialiseTables();
     }
 
+    /**
+     * Initialize the table for guests
+     */
     private initialiseTables() {
         for (let i = 0; i < 3; i++) {
             let guest = {
