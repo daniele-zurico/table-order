@@ -5,6 +5,7 @@ a live preview of the project is available on: http://www.dzurico.com/book-table
 There're two branches:
 - master: original project
 - feature/ngrx-store: refactor using @ngrx-store
+- feature/store-devtools: refactor using @store-devtools
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
 
