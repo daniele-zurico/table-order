@@ -6,7 +6,6 @@ import {
     MdDialogModule
 } from '@angular/material';
 import {BookDialogModule} from '../book-dialog/book-dialog.module';
-import {Store, StoreModule} from '@ngrx/store';
 
 @NgModule({
     imports: [
